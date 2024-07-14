@@ -6,7 +6,6 @@ from rest_framework.authtoken.models import Token
 from django.contrib.auth.models import User
 from utils.utils import validate_password
 from django.shortcuts import get_object_or_404
-from rest_framework.decorators import authentication_classes, permission_classes
 from rest_framework.authentication import SessionAuthentication, TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 
