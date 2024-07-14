@@ -18,11 +18,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from books.views import BookViewSet
+from auth.views import AuthViewSet
 
 router = routers.DefaultRouter()
 router.register(r'books', BookViewSet)
+router.register(r'auth', AuthViewSet, basename='auth')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
 ]
